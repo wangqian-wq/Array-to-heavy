@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+            var arr = [1,1,2,6,3,5,0,3,6,8,9,4,4,2,0,9,5,2,7,4,2,3,4,6];
+            function uniqueArr (array) {
+            var _arr = [];
+                //_temp = new Map();
+                _temp = {};
+                // _temp = {
+                //     1:1,
+                //     2:1
+                // }
+                // _arr-> [1, 2]
+            for(var i = 0; i < array.length; i ++) {
+                // if(!_temp.get(array[i])) {
+                //     _temp.set(array[i], 1);
+                //     _arr.push(array[i]);
+                // }
+                if(!_temp[array[i]]) {
+                    _temp[array[i]] = 1;
+                    _arr.push(array[i]);
+                }
+            }
+                return _arr;
+            }
+           console.log(uniqueArr(arr).sort());
+              
+    </script>
+</body>
+</html>

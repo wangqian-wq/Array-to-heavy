@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+            var arr = [1,1,2,6,3,5,0,3,6,8,9,4,4,2,0,9,5,2,7,4,2,3,4,6];
+            function uniqueArr (array) {
+                // array.indexOf(item) -1 index 具体位置 NaN 无效
+                // array.includes(item) true false
+                var _arr = [];
+                array.forEach(function (item) {
+                    if (!_arr.includes(item)) {
+                        _arr.push(item);
+                    }
+                });
+                return _arr;
+            }
+           console.log(uniqueArr(arr).sort());
+    </script>
+</body>
+</html>

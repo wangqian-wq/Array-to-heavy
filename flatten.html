@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = [[1,2,2], [3,4,4],[6,7,8,9],10,11,12,[12,13,14]];
+        console.log(flatten(arr));
+        function flatten(arr) {
+            var _arr = arr || [],
+            fArr = [],
+            len = _arr.length,
+            item;
+            for(var i = 0; i < len; i ++) {
+                item = _arr[i];
+                if(_isArr(item)) {
+                    fArr = fArr.concat(flatten(item));
+                } else {
+                    fArr.push(item);
+                }
+            }
+            return fArr;
+            function _isArr(item) {
+                return {}.toString.call(item) === '[object Array]';
+            }
+        }
+    </script>
+</body>
+</html>

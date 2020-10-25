@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        Array.prototype.flatten = function () {
+            var _arr = this,
+            toStr = {}.toString;
+        if(toStr.call(_arr) !== '[object Array]') {
+            throw new Error('只有数组才能调用flatten方法');
+        }
+        var fArr = [];
+        _arr.forEach(function (item) {
+            toStr.call(item) === '[object Array]'
+            
+        })
+        }
+    </script>
+</body>
+</html>
